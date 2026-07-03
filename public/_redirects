@@ -1,0 +1,9 @@
+# Netlify redirects configuration
+# This file routes API calls to a hosted Node.js server and resolves SPA routing 404 errors.
+
+# 1. Route API requests to your hosted Express backend (e.g. Render, Railway, or Fly.io)
+# Replace the URL below with your actual hosted backend API URL.
+/api/*  https://your-backend-url.onrender.com/api/:splat  200
+
+# 2. Redirect all other requests to index.html to support React SPA routing
+/*  /index.html  200
